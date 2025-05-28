@@ -60,15 +60,25 @@ def plagiarismPhrases(txt):
     coincidences = re.findall(pattern, txt, flags = re.I)
     return coincidences
 
+#Patrón para encontrar frases repetidas N veces. La función retorna la lista con las coincidencias.
+def repeatedPhrases(txt, piece):
+    #El patrón delimita inicio y fin de una frase y verifica que la frase dada en consola esté en el texto
+    pattern = r'\b' + piece + r'\b'
+    coincidences = re.findall(pattern, txt)
+    return coincidences
+
 if __name__ == '__main__':
-    txt = """La Ciberseguridad es un área en constante crecimiento que nos permite mantenernos informados 
+    txt = """La Ciberseguridad es un área. en constante crecimiento que nos permite mantenernos informados 
     y preparados frente a las diversas amenazas y novedades relacionadas a la seguridad de nuestros datos 
     (en español), por ente, se comparte un artículo de investigación, el cual, lo debe guardar como ¿cuál?, 
     añadís o ¡encantadaaaa!  un archivo en formato de texto (.txt) Manuela, Silla, Sillá, Ñandú Pepe, euforia, 
-    eufonía, murciélago, micorreo@correounivalle, @al@go Algoa@ @ amistadoso p.ej. T., q.e.p.d. m.c. Vda. 
-    de acuerdo con algunos estudios, según el autor:"""
+    eufonía, murciélago, micorreo@correounivalle, @al@go Algoa@ @ amistadoso p.ej. T., q.e.p.d. m.c. Vda. área. 
+    de acuerdo con algunos estudios, área. según el autor: La Ciberseguridad es un área en constante crecimiento."""
+    pieza = input("Ingresa la frase que quieres ver si se repite: ")
+
     #prueba
     salida = "Coincidencias: "
-    for i in range(0, len(endsWith(txt))):
-        salida += (endsWith(txt)[i]) +", "
+    for i in range(0, len(repeatedPhrases(txt, pieza))):
+        salida += (repeatedPhrases(txt, pieza)[i]) +", "
     print(salida)
+    print(f"Se repite {len(repeatedPhrases(txt,pieza))} veces")
