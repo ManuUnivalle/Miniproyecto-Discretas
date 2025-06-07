@@ -1,0 +1,82 @@
+Cybercrime
+
+Quizás los tipos más peligrosos de creadores de malware son los hackers y grupos de hackers que crean programas 
+de software malicioso en un esfuerzo por lograr sus propios objetivos delictivos específicos. Estos cibercriminales 
+crean virus informáticos y programas troyanos que pueden:
+
+Robar códigos de acceso a cuentas bancarias
+Publicitar productos o servicios en la computadora de una víctima
+Usar ilegalmente los recursos de una computadora infectada para desarrollar y ejecutar:
+Campañas de spam
+Ataques de red distribuidos (también llamados ataques DDoS)
+Operaciones de extorsión
+
+¿Qué es la ciberdelincuencia... y cuáles son los riesgos?
+Para obtener más información sobre cómo operan los cibercriminales y cuáles son los riegos de caer presa de sus 
+actividades, haga clic en los enlaces a continuación:
+
+Soporte para spammers
+Ataques de redes distribuidos/DDoS
+¿Qué es un botnet?
+Llamadas con cobro premium y envío de SMS pagos
+Robo de moneda electrónica
+Robo de información de banca en línea
+Ransomware y ciberchantaje
+Evolución de los métodos de envío de virus
+Ataques de virus de computadora dirigidos
+
+¿Cómo protegerse de la ciberdelincuencia?
+Como los cibercriminales utilizan muchas técnicas para atacar las computadoras y los datos de los usuarios, se 
+vuelve imprescindible el uso de defensas en varias capas. Las soluciones antimalware que combinan detección basada 
+en firma, análisis heurístico y tecnologías en la nube pueden ser mucho más útiles para proteger sus dispositivos y 
+datos contra nuevas y sofisticadas amenazas.
+
+Kaspersky Lab es reconocido por sus productos antimalware de varias capas de primer nivel que pueden proteger una 
+amplia gama de computadoras y dispositivos contra la ciberdelincuencia, lo que incluye:
+
+PC con Windows
+Computadoras con Linux
+Apple Mac
+Smartphones
+Tablets
+
+
+Cybercrime
+
+Perhaps the most dangerous types of malware creators are hackers and hacking groups who create malicious software 
+programs in an effort to achieve their own specific criminal goals. These cybercriminals create computer viruses and 
+Trojan horse programs that can:
+
+Stealing access codes to bank accounts
+Advertising products or services on a victim's computer
+Illegally using the resources of an infected computer to develop and execute:
+Spam campaigns
+Distributed network attacks (also called DDoS attacks)
+Extortion operations
+
+What is cybercrime... and what are the risks?
+To learn more about how cybercriminals operate and the risks of falling prey to their activities, click on the links below:
+
+Support for spammers
+Distributed Network Attacks/DDoS
+What is a botnet?
+Premium calls and paid SMS sending
+Electronic currency theft
+Theft of online banking information
+Ransomware and cyber blackmail
+Evolution of virus delivery methods
+Targeted computer virus attacks
+
+How to protect yourself from cybercrime?
+As cybercriminals use a variety of techniques to attack computers and user data, multi-layered defenses become essential. 
+Anti-malware solutions that combine signature-based detection, heuristic analysis, and cloud technologies can be much more 
+effective in protecting your devices and data against new and sophisticated threats.
+
+Kaspersky Lab is recognized for its top-tier, multi-layered anti-malware products that can protect a wide range of computers 
+and devices from cybercrime, including:
+
+PC con Windows
+Computers with Linux
+Apple Mac
+Smartphones
+Tablets
