@@ -18,7 +18,7 @@ def questions(txt):
     #El patrón asegura que haya un signo de pregunta al inicio y al final de la expresión o solo al 
     #final (en el caso de las preguntas en inglés) que puede tener cualquier caracter alfanumérico, 
     #espacios y signos de puntuación.
-    pattern = r'\¿[^\n]+\?|[^\n¿]+\?'
+    pattern = r'\¿[^\n\¡\!]+\?|[^\n\¿\¡\!]+\?'
     coincidences = re.findall(pattern, txt, flags = re.IGNORECASE)
     return coincidences
 
@@ -27,8 +27,8 @@ def exclamations(txt):
     #El patrón asegura que haya un signo de exclamación al inicio y al final de la expresión o solo al 
     #final (en el caso de las preguntas en inglés) que puede tener cualquier caracter alfanumérico, 
     #espacios y signos de puntuación.
-    pattern = r'\¡[^\n]+\!|[^\n¡]+\!'
-    coincidences = re.findall(pattern, txt, flags = re.I)
+    pattern = r'\¡[^\n\¿\?]+\!|[^\n\¡\¿\?]+\!'
+    coincidences = re.findall(pattern, txt, flags = re.IGNORECASE)
     return coincidences
 
 #Funcion que carga el archivo y retorna el texto completo
