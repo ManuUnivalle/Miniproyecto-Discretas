@@ -48,6 +48,13 @@ def commonAbreviations(txt):
     coincidences = re.findall(pattern, txt)
     return coincidences
 
+def commonAbreviationsEnglish(txt):
+    #El patrón agrupa letras que se repiten 1 o más veces seguidas de un apostrofe. 
+    #Luego van letras desde a-z que se repiten por lo menos 1 o más veces
+    pattern = r'(?:[A-ZÁ-Úa-zá-úñÑ]+\.)|(?:[A-ZÁ-Úa-zá-úñÑ]+\')[a-z]+\b'
+    coincidences = re.findall(pattern, txt)
+    return coincidences
+
 #Patrón para expresiones que podrían indicar plagio. La función busca en el texto frases que coincidan con las de la lista predeterminada.
 #Retorna la lista con las coincidencias
 def plagiarismPhrases(txt):
@@ -71,14 +78,17 @@ if __name__ == '__main__':
     txt = """La Ciberseguridad es un área. en constante crecimiento que nos permite mantenernos informados 
     y preparados frente a las diversas amenazas y novedades relacionadas a la seguridad de nuestros datos 
     (en español), por ente, se comparte un artículo de investigación, el cual, lo debe guardar como ¿cuál?, 
-    añadís o ¡encantadaaaa!  un archivo en formato de texto (.txt) Manuela, Silla, Sillá, Ñandú Pepe, euforia, 
-    eufonía, murciélago, micorreo@correounivalle, @al@go Algoa@ @ amistadoso p.ej. T., q.e.p.d. m.c. Vda. área. 
-    de acuerdo con algunos estudios, área. según el autor: La Ciberseguridad es un área en constante crecimiento."""
-    pieza = input("Ingresa la frase que quieres ver si se repite: ")
+    añadís o ¡encantadaaaa! autenticó un archivo en formato de texto (.txt). Manuela, Silla, Sillá, Ñandú Pepe, 
+    euforia, eufonía, murciélago, micorreo@correounivalle, @al@go Algoa@ @ amistadoso p.ej. T., q.e.p.d. m.c. 
+    Vda. área. de acuerdo con algunos estudios, área. según el autor: La Ciberseguridad es un área en constante 
+    crecimiento. Como pudiste notarlo, la contracción couldn't, significa could not. Allí, la "o" de not, no 
+    aparece en su forma contraída, entonces el apóstrofo toma su lugar, justo entre la "n" y la "t". I've. En el 
+    caso de you'll, Mr. Mrs."""
+    #pieza = input("Ingresa la frase que quieres ver si se repite: ")
 
     #prueba
     salida = "Coincidencias: "
-    for i in range(0, len(repeatedPhrases(txt, pieza))):
-        salida += (repeatedPhrases(txt, pieza)[i]) +", "
+    for i in range(0, len(commonAbreviationsEnglish(txt))):
+        salida += (commonAbreviationsEnglish(txt)[i]) +", "
     print(salida)
-    print(f"Se repite {len(repeatedPhrases(txt,pieza))} veces")
+    #print(f"Se repite {len(repeatedPhrases(txt,pieza))} veces")
