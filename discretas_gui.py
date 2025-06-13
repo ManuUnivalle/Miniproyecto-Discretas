@@ -175,7 +175,8 @@ def verify_otp():
     if otp_entry.get() == otp_code:
         show_success()
     else:
-        otp_message.configure(text="Código incorrecto. Intenta nuevamente.")
+        mbox.showerror("Error", "Código incorrecto. Intentalo de Nuevo.")
+        show_welcome()
 
 def show_success():
     clear_widgets()
@@ -208,7 +209,7 @@ def show_success():
 
 
 if __name__ == "__main__":
- # Set the default color theme to blue
+
     root = ctk.CTk()
     root.title("BUPEN")
     root.geometry("700x500")
