@@ -13,7 +13,7 @@ Operaciones de extorsión
 
 ¿Qué es la ciberdelincuencia... y cuáles son los riesgos?
 Para obtener más información sobre cómo operan los cibercriminales y cuáles son los riegos de caer presa de sus 
-actividades, haga clic en los enlaces a continuación:
+actividades, haga clic en los enlaces a continuación: 
 
 Soporte para spammers
 Ataques de redes distribuidos/DDoS
@@ -40,16 +40,17 @@ Apple Mac
 Smartphones
 Tablets
 
+¡Hola mundo! ¡Esto es una prueba! ¿Cómo estás? ¡Bien!
 
 Cybercrime
 
-Perhaps the most dangerous types of malware creators are hackers and hacking groups who create malicious software 
-programs in an effort to achieve their own specific criminal goals. These cybercriminals create computer viruses and 
-Trojan horse programs that can:
+Perhaps the most dangerous types of malware creators are hackers and hacker groups who create malicious software 
+programs in an effort to achieve their own specific criminal goals. These cybercriminals create computer viruses 
+and Trojan horse programs that can:
 
-Stealing access codes to bank accounts
-Advertising products or services on a victim's computer
-Illegally using the resources of an infected computer to develop and execute:
+Steal bank account access codes
+Advertise products or services on a victim's computer
+Illegally use an infected computer's resources to develop and execute:
 Spam campaigns
 Distributed network attacks (also called DDoS attacks)
 Extortion operations
@@ -57,26 +58,34 @@ Extortion operations
 What is cybercrime... and what are the risks?
 To learn more about how cybercriminals operate and the risks of falling prey to their activities, click on the links below:
 
-Support for spammers
-Distributed Network Attacks/DDoS
+Spam Support
+Distributed Network/DDoS Attacks
 What is a botnet?
-Premium calls and paid SMS sending
-Electronic currency theft
-Theft of online banking information
-Ransomware and cyber blackmail
+Premium-charge calls and paid SMS sending
+E-currency theft
+Online banking information theft
+Ransomware and cyberblackmail
 Evolution of virus delivery methods
 Targeted computer virus attacks
 
 How to protect yourself from cybercrime?
-As cybercriminals use a variety of techniques to attack computers and user data, multi-layered defenses become essential. 
+As cybercriminals use many techniques to attack computers and user data, multi-layered defenses become essential. 
 Anti-malware solutions that combine signature-based detection, heuristic analysis, and cloud technologies can be much more 
 effective in protecting your devices and data against new and sophisticated threats.
 
-Kaspersky Lab is recognized for its top-tier, multi-layered anti-malware products that can protect a wide range of computers 
+Kaspersky Lab is recognized for its top-tier multi-layered anti-malware products that can protect a wide range of computers 
 and devices from cybercrime, including:
 
-PC con Windows
-Computers with Linux
-Apple Mac
+Windows PCs
+Linux PCs
+Apple Macs
 Smartphones
 Tablets
+
+Hello world! This is a test! How are you? Good!
+Some tests for abbreviations:
+E.E.U.U.
+O.N.U.
+S.A.
+rock'n'roll
+d'Artagnan

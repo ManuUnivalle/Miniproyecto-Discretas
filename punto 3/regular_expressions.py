@@ -9,7 +9,7 @@ import re
 #Patrón para encontrar abreviaciones comunes. La función retorna la lista con las coincidencias.
 def abreviations(txt):
     #El patrón agrupa letras que se repiten 1 o más veces seguidas de un punto o apostrofo. 
-    pattern = r'(?:[a-zá-úñ]+\.){2,}|(?:[a-z]+\')[a-z]+\b'
+    pattern = r'(?:[a-zá-úñ]+\.){2,}|(?:[a-z]+\'){1,}[a-z]+\b'
     coincidences = re.findall(pattern, txt, re.IGNORECASE)
     return coincidences
 
@@ -27,7 +27,7 @@ def exclamations(txt):
     #El patrón asegura que haya un signo de exclamación al inicio y al final de la expresión o solo al 
     #final (en el caso de las preguntas en inglés) que puede tener cualquier caracter alfanumérico, 
     #espacios y signos de puntuación.
-    pattern = r'\¡[^\n\¿\?]+\!|[^\n\¡\¿\?]+\!'
+    pattern = r'¡[^¡!¿\?]*?!|[^¡!¿\?\n]+!'
     coincidences = re.findall(pattern, txt, flags = re.IGNORECASE)
     return coincidences
 
