@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import re
 import random
+import tkinter.messagebox as mbox
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("blue")
@@ -39,7 +40,7 @@ def show_welcome():
 
     botton_exit = ctk.CTkButton(
         frame,
-        text="Salir",
+        text="Apagar",
         fg_color="#e74c3c",
         hover_color="#c0392b",
         font=ctk.CTkFont(family="Georgia", size=16, weight="bold"),
@@ -51,7 +52,7 @@ def show_welcome():
 
 def show_login():
     clear_widgets()
-    global email_entry, password_entry, login_message, login_title_label, login_button, back_button
+    global email_entry, password_entry, login_message, login_title_label, login_button
     frame = ctk.CTkFrame(root, fg_color="#d6eaf8", width=600, height=450)
     frame.pack(expand=True, fill="both", padx=40, pady=40)
 
@@ -71,7 +72,7 @@ def show_login():
         anchor="w"
     )
     email_label.pack(pady=(0, 0), fill="x")
-    email_entry = ctk.CTkEntry(frame, font=ctk.CTkFont(size=16), height=27, width=400)
+    email_entry = ctk.CTkEntry(frame, font=ctk.CTkFont(size=16), height=35, width=400)
     email_entry.pack(pady=5, fill="x")
 
     password_label = ctk.CTkLabel(
@@ -82,7 +83,7 @@ def show_login():
         anchor="w"
     )
     password_label.pack(pady=(10, 0), fill="x")
-    password_entry = ctk.CTkEntry(frame, show="*", font=ctk.CTkFont(size=16), height=27, width=400)
+    password_entry = ctk.CTkEntry(frame, show="*", font=ctk.CTkFont(size=16), height=35, width=400)
     password_entry.pack(pady=5, fill="x")
 
     login_message = ctk.CTkLabel(frame, text="", text_color="#C0392B", font=ctk.CTkFont(size=14, weight="bold"))
@@ -101,19 +102,6 @@ def show_login():
     )
     login_button.pack(pady=2)
 
-    back_button = ctk.CTkButton(
-        frame,
-        text="Volver",
-        command=show_welcome,
-        fg_color="#e74c3c",
-        hover_color="#c0392b",
-        text_color="white",
-        font=ctk.CTkFont(size=16, weight="bold"),
-        height=40,
-        width=220
-    )
-    back_button.pack(pady=5)
-
 def validate_login():
     email = email_entry.get()
     password = password_entry.get()
@@ -124,10 +112,8 @@ def validate_login():
         otp_code = ''.join(random.choices('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=6))
         show_otp()
     else:
-        login_message.configure(text="Credenciales inválidas.\nCorreo debe ser @correounivalle.edu.co y contraseña de al menos 8 caracteres.")
-        email_entry.delete(0, "end")      # Limpia el campo de correo
-        password_entry.delete(0, "end")   # Limpia el campo de contraseña
-        
+        mbox.showerror("Error", "Credenciales incorrectas. Vuelve a intentarlo.")
+        show_welcome()
 
 
 def show_otp():
