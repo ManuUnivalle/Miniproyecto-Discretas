@@ -1,5 +1,12 @@
-import customtkinter as ctk
+# Integrante1: Manuela Delgado Aguirre - 2459640
+# Integrante2: Paula Jimena Bohórquez Bermúdez - 2459409
+# Docente: Luis Germán Toro Pareja
+# Grupo: 50
+# Laboratorio 5
+
+
 import re
+import customtkinter as ctk
 import random
 import tkinter.messagebox as mbox
 
@@ -11,6 +18,8 @@ def clear_widgets():
     for widget in root.winfo_children():
         widget.destroy()
 
+# Función que representa el estado q0: "apagado". Tiene menú para encender o no el sistema (transición desde q0)
+# y muestra un mensaje de bienvenida. Si el usuario decide encender el sistema, transita al estado q1 (login).
 def show_welcome():
     clear_widgets()
     frame = ctk.CTkFrame(root, fg_color="#d7bde2", width=500, height=350)
@@ -49,6 +58,9 @@ def show_welcome():
         command=root.destroy
     )
     botton_exit.pack(pady=10)
+
+# Función que representa el estado q1: validación de credenciales. Usa expresiones regulares tanto para validar el correo como
+# la contraseña. Si las credenciales son correctas, genera un código OTP aleatorio y transita al estado q2.
 
 def show_login():
     clear_widgets()
@@ -102,6 +114,8 @@ def show_login():
     )
     login_button.pack(pady=2)
 
+# Función que valida las credenciales ingresadas. Si son correctas, genera un código OTP aleatorio y transita al estado q2.
+# Si son incorrectas, muestra un mensaje de error y regresa al estado q0 (bienvenida).
 def validate_login():
     email = email_entry.get()
     password = password_entry.get()
@@ -115,7 +129,8 @@ def validate_login():
         mbox.showerror("Error", "Credenciales incorrectas. Vuelve a intentarlo.")
         show_welcome()
 
-
+#Función que representa el estado q2: verificación del código OTP. Muestra el código generado y permite al usuario ingresarlo.
+# Si el código es correcto, transita al estado q3 (Aceptado). Si es incorrecto, muestra un mensaje de error y regresa al estado q0 (bienvienida).
 def show_otp():
     clear_widgets()
     global otp_entry, otp_message
@@ -171,6 +186,7 @@ def show_otp():
     )
     verify_button.pack(pady=20)
 
+# Función que verifica el código OTP ingresado. Si es correcto, transita al estado q3 (éxito). Si es incorrecto, muestra un mensaje de error.
 def verify_otp():
     if otp_entry.get() == otp_code:
         show_success()
@@ -178,6 +194,7 @@ def verify_otp():
         mbox.showerror("Error", "Código incorrecto. Intentalo de Nuevo.")
         show_welcome()
 
+# Función que representa el estado q3: éxito. Muestra un mensaje de bienvenida y un botón para salir del programa.
 def show_success():
     clear_widgets()
     frame = ctk.CTkFrame(root, fg_color="#d7bde2", width=600, height=450)
