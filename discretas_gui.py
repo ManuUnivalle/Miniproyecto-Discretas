@@ -4,7 +4,6 @@
 # Grupo: 50
 # Laboratorio 5
 
-
 import re
 import customtkinter as ctk
 import random
@@ -59,9 +58,7 @@ def show_welcome():
     )
     botton_exit.pack(pady=10)
 
-# Función que representa el estado q1: validación de credenciales. Usa expresiones regulares tanto para validar el correo como
-# la contraseña. Si las credenciales son correctas, genera un código OTP aleatorio y transita al estado q2.
-
+# Función que muestra la interfaz para ingresar las credenciales (correo y contraseña).
 def show_login():
     clear_widgets()
     global email_entry, password_entry, login_message, login_title_label, login_button
@@ -114,8 +111,9 @@ def show_login():
     )
     login_button.pack(pady=2)
 
-# Función que valida las credenciales ingresadas. Si son correctas, genera un código OTP aleatorio y transita al estado q2.
-# Si son incorrectas, muestra un mensaje de error y regresa al estado q0 (bienvenida).
+# Función que representa el estado q1: validación de credenciales. Usa expresiones regulares tanto para validar el correo como
+# la contraseña. Si las credenciales son correctas, genera un código OTP aleatorio y transita al estado q2. Si son incorrectas,
+# muestra un mensaje de error (que representa a q4) y regresa al estado q0 (bienvienida).
 def validate_login():
     email = email_entry.get()
     password = password_entry.get()
@@ -129,8 +127,7 @@ def validate_login():
         mbox.showerror("Error", "Credenciales incorrectas. Vuelve a intentarlo.")
         show_welcome()
 
-#Función que representa el estado q2: verificación del código OTP. Muestra el código generado y permite al usuario ingresarlo.
-# Si el código es correcto, transita al estado q3 (Aceptado). Si es incorrecto, muestra un mensaje de error y regresa al estado q0 (bienvienida).
+# Función que muestra la interfaz para ingresar y validar el código OTP generado
 def show_otp():
     clear_widgets()
     global otp_entry, otp_message
@@ -186,7 +183,9 @@ def show_otp():
     )
     verify_button.pack(pady=20)
 
-# Función que verifica el código OTP ingresado. Si es correcto, transita al estado q3 (éxito). Si es incorrecto, muestra un mensaje de error.
+#Función que representa el estado q2: verificación del código OTP. Muestra el código generado y permite al usuario ingresarlo.
+# Si el código es correcto, transita al estado q3 (Aceptado). Si es incorrecto, muestra un mensaje de error (que representa a q4) 
+# y regresa al estado q0 (bienvienida).
 def verify_otp():
     if otp_entry.get() == otp_code:
         show_success()
@@ -231,7 +230,6 @@ if __name__ == "__main__":
     root.title("BUPEN")
     root.geometry("700x500")
     root.resizable(0, 0)
-
 
     show_welcome()
     root.mainloop()
